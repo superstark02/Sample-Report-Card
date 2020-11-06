@@ -1,0 +1,13 @@
+.subject{
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: #f39d1280;
+    border: solid 3px #f39c12;
+    width: fit-content;
+}
+.subject-label{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    color: grey;
+}
