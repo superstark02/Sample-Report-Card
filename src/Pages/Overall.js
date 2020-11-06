@@ -40,9 +40,9 @@ export class Overall extends Component {
                         </div>
                     </div>
                 </div>
-                <h4>
+                <h3>
                     Skills
-                </h4>
+                </h3>
                 <div className="wrap" style={{ width: "fit-content" }} >
                     <FaTachometerAlt color="#1abc9c" size="20px" style={{ marginRight: "10px" }} /> Speed
                 </div>
@@ -59,6 +59,8 @@ export class Overall extends Component {
                     <FaProjectDiagram color="#3498db" size="20px" style={{ marginRight: "10px" }} /> Conceptual
                 </div>
                 <CustomizedSlider mycolor="#3498db" value={78} />
+
+ 
             </div>
         )
     }

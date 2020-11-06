@@ -79,11 +79,11 @@ export class Learning extends Component {
                 </div>
 
                 <div className="wrap" >
-                    <div className="timeline-item" style={{backgroundColor:"#339af0",color:"white"}} >
+                    <div className="timeline-item" style={{ backgroundColor: "#339af0", color: "white" }} >
                         <div className="wrap" style={{ width: "100px", height: "90px", backgroundColor: "rbga(0,0,0,0.3)" }} >
                             <FaBook size="40px" color="white" />
                         </div>
-                        <div style={{ padding: "10px", fontSize:"20px" }} className="wrap" >
+                        <div style={{ padding: "10px", fontSize: "20px" }} className="wrap" >
                             <div>
                                 <b>Go To Notes</b>
                             </div>
@@ -91,7 +91,7 @@ export class Learning extends Component {
                     </div>
                 </div>
 
-                <div style={{marginTop:"40px"}} >
+                <div style={{ marginTop: "40px" }} >
                     <h2>Timeline</h2>
                 </div>
 
@@ -103,12 +103,22 @@ export class Learning extends Component {
                                     <div className="wrap" style={{ width: "100px", height: "90px", backgroundColor: "rbga(0,0,0,0.3)" }} >
                                         <FaPlay color="grey" />
                                     </div>
-                                    <div style={{ padding: "10px" }} >
+                                    <div style={{ padding: "10px", display:"flex", flexDirection:"column", justifyContent:"space-between" }} >
                                         <div>
-                                            <b>Topic Name</b>
+                                            <div>
+                                                <b>Topic Name</b>
+                                            </div>
+                                            <div className="sub-heading" >
+                                                Date Studied
+                                            </div>
                                         </div>
-                                        <div className="sub-heading" >
-                                            Date Studied
+                                        <div style={{fontSize:"13px"}} >
+                                            <div>
+                                                Related Notes
+                                            </div>
+                                            <div style={{fontSize:"12px", color:"#20E647"}} >
+                                                You were peresent
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

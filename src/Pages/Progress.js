@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LineChart from '../Charts/LineChart';
-import { FaAtom, FaCalculator, FaMagnet, FaVials } from 'react-icons/fa';
+import { FaAtom, FaBalanceScaleRight, FaCalculator, FaMagnet, FaTrophy, FaVials } from 'react-icons/fa';
 import '../CSS/Pages/Learning.css'
 import SmallGuage from '../Charts/SmallGuage';
 
@@ -59,6 +59,36 @@ export class Progress extends Component {
                         data: [90, 82, 75, 76, 99, 70, 95]
                     }]
                 } />
+
+                <div style={{ display: "flex", flexWrap: "wrap" }} >
+                    <div style={{ display: "flex", margin: "10px 0px" }} >
+                        <div className="attendance" >
+                            <FaBalanceScaleRight size="30px" />
+                        </div>
+                        <div style={{ margin: "0px 10px" }} >
+                            <div>
+                                <b>Average Score</b>
+                            </div>
+                            <div>
+                                93%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style={{ display: "flex", margin: "10px 0px" }} >
+                        <div className="attendance" >
+                            <FaTrophy size="30px" />
+                        </div>
+                        <div style={{ margin: "0px 10px" }} >
+                            <div>
+                                <b>Top Score</b>
+                            </div>
+                            <div>
+                                97%
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <h3 style={{ margin: "10px 0px" }} >
                     Tests Taken
