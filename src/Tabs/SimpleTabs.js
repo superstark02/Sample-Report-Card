@@ -46,7 +46,6 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
     maxWidth:"100%"
   },
 }));
@@ -61,7 +60,7 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor:"white",color:"rgba(0,0,0,0.8)"}} >
         <Tabs value={value} onChange={handleChange} variant="fullWidth" aria-label="simple tabs example">
           <Tab label="Overall" {...a11yProps(0)} />
           <Tab label="Learning" {...a11yProps(1)} />
@@ -80,19 +79,6 @@ export default function SimpleTabs() {
             
           </div>
         </div>
-        {/*<LineChart series={
-          [{
-            name: 'Maths',
-            data: [90, 80, 78, 91, 82, 92, 87]
-          }]
-        } />
-
-        <LineChart series={
-          [{
-            name: 'Biology',
-            data: [95, 92, 95, 96, 90, 90, 91]
-          }]
-        } />*/}
         <Progress/>
       </TabPanel>
     </div>

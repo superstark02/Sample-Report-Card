@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Chart from 'react-apexcharts'
 
-export class Guage extends Component {
+export class SmallGuage extends Component {
     constructor(props) {
         super(props);
 
@@ -10,15 +10,24 @@ export class Guage extends Component {
             series: [props.value],
             options: {
               chart: {
-                height: 350,
+                height: 150,
                 type: 'radialBar',
               },
               colors:[props.mycolor],
               plotOptions: {
                 radialBar: {
                   hollow: {
-                    size: '60%',
-                  }
+                    size: '50%',
+                  },
+                  dataLabels:{
+                    name: {
+                      fontSize: "15px",
+                      offsetY: 5
+                    },
+                    value: {
+                      show: false
+                    }
+                  },
                 },
               },
               stroke: {
@@ -32,10 +41,10 @@ export class Guage extends Component {
     render() {
         return (
             <div>
-                <Chart options={this.state.options} series={this.state.series} type="radialBar" height={200}  />
+                <Chart options={this.state.options} series={this.state.series} type="radialBar" height={100}  />
             </div>
         )
     }
 }
 
-export default Guage
+export default SmallGuage

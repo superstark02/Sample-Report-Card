@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import LineChart from '../Charts/LineChart';
 import { FaAtom, FaCalculator, FaMagnet, FaVials } from 'react-icons/fa';
+import '../CSS/Pages/Learning.css'
+import SmallGuage from '../Charts/SmallGuage';
+
+const number = [1, 2, 3, 4, 5, 6, 7]
 
 export class Progress extends Component {
     render() {
@@ -42,13 +46,13 @@ export class Progress extends Component {
                 </div>
                 <hr></hr>
 
-                <h3>
+                <h2>
                     Maths
-                </h3>
+                </h2>
 
-                <div>
-                    Test Scores 
-                </div>
+                <h3>
+                    Test Scores
+                </h3>
                 <LineChart series={
                     [{
                         name: 'Physics',
@@ -56,9 +60,34 @@ export class Progress extends Component {
                     }]
                 } />
 
-                <div style={{margin:"10px 0px"}} >
+                <h3 style={{ margin: "10px 0px" }} >
                     Tests Taken
-                </div>
+                </h3>
+
+                {
+                    number.map(item => {
+                        return (
+                            <div className="wrap" >
+                                <div className="timeline-item" >
+                                    <div className="wrap" style={{ width: "80px", height: "90px", backgroundColor: "rbga(0,0,0,0.3)" }} >
+                                        <SmallGuage mycolor={"rgb(" + item * 10 + ",255," + item * 20 + ")"} value={item * 10} title={item * 10} />
+                                    </div>
+                                    <div className="wrap" >
+                                        <div style={{ padding: "10px" }} >
+                                            <div>
+                                                <b>Topics</b>
+                                            </div>
+                                            <div className="sub-heading" >
+                                                dd/mm/yyyy
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+
             </div>
         )
     }

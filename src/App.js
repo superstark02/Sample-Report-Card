@@ -9,7 +9,7 @@ import SimpleTabs from './Tabs/SimpleTabs';
 function App() {
   return (
     <div className="App">
-      <AppBar position="static">
+      <AppBar position="static"  style={{backgroundColor:"white",color:"rgba(0,0,0,0.8)"}} >
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu">
           </IconButton>
