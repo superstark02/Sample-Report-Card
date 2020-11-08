@@ -12,7 +12,7 @@ export class Learning extends Component {
             <div>
                 <BrowserRouter>
                 <div style={{ display: "flex" }} >
-                    <Link to="/subject/maths/fc427b" >
+                    <Link to={"/"+this.props.id+"/subject/maths/"+"fc427b"} >
                         <div style={{ width: "fit-content", margin: "10px" }}  >
                             <div className="wrap subject" style={{ backgroundColor: "rgba(252, 66, 123,0.5)", borderColor: "rgba(252, 66, 123,1.0)" }} >
                                 <FaCalculator color="white" size="20px" />
@@ -22,6 +22,8 @@ export class Learning extends Component {
                             </div>
                         </div>
                     </Link>
+
+                    <Link to={"/"+this.props.id+"/subject/chemistry/"+"1b9cfc"} >
                     <div style={{ width: "fit-content", margin: "10px" }}  >
                         <div className="wrap subject" style={{ backgroundColor: "rgba(27, 156, 252,0.5)", borderColor: "rgba(27, 156, 252,1.0)" }} >
                             <FaVials color="white" size="20px" />
@@ -30,6 +32,8 @@ export class Learning extends Component {
                             Chemistry
                         </div>
                     </div>
+                    </Link>
+
                     <div style={{ width: "fit-content", margin: "10px" }}  >
                         <div className="wrap subject" style={{ backgroundColor: "rgba(235, 47, 6,0.5)", borderColor: "rgba(235, 47, 6,1.0)" }} >
                             <FaMagnet color="white" size="20px" />

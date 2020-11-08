@@ -1,10 +1,54 @@
 import React, { Component } from 'react'
 import Guage from '../Charts/Guage';
+import getDoc, { getSubDoc } from '../Database/getDoc'
 import { FaFileAlt, FaDumbbell, FaPlay, FaBook } from 'react-icons/fa';
 
 const number = [1, 2, 3, 4, 5, 6, 7]
 
 export class SubjectLearning extends Component {
+
+    state = {
+        testAttempted: 0,
+        strength: 0,
+        syllabus: 0,
+        default: 0,
+    }
+
+    constructor(props){
+        super(props);
+
+        getSubDoc("Students",props.match.params.name,"Subjects",props.match.params.id).then(item=>{
+            this.setState({testAttempted:item.tests});
+            this.setState({strength:item.strength});
+        })
+
+        getSubDoc("Students", "default", "Subjects", props.match.params.id).then(snap=>{
+            this.setState({default:snap})
+        })
+    }
+
+    componentDidMount(){
+        getSubDoc("Students",this.props.match.params.name,"Subjects",this.props.match.params.id).then(item=>{
+            this.setState({testAttempted:item.tests});
+            this.setState({strength:item.strength});
+        })
+
+        getSubDoc("Students", "default", "Subjects", this.props.match.params.id).then(snap=>{
+            this.setState({default:snap})
+        })
+    }
+
+    componentDidUpdate(){
+        getSubDoc("Students",this.props.match.params.name,"Subjects",this.props.match.params.id).then(item=>{
+            this.setState({testAttempted:item.tests});
+            this.setState({strength:item.strength});
+        })
+
+        getSubDoc("Students", "default", "Subjects", this.props.match.params.id).then(snap=>{
+            this.setState({default:snap})
+        })
+    }
+
     render() {
         return (
             <div>
@@ -17,10 +61,10 @@ export class SubjectLearning extends Component {
                             </div>
                             <div style={{ margin: "0px 10px" }} >
                                 <div>
-                                    <b>Tests Atempted</b>
+                                    <b>Tests Attempted</b>
                                 </div>
                                 <div>
-                                    12/13
+                                    {this.state.testAttempted}/{this.state.default.tests}
                                 </div>
                             </div>
                         </div>
@@ -33,7 +77,7 @@ export class SubjectLearning extends Component {
                                     <b>Your Strength</b>
                                 </div>
                                 <div>
-                                    90%
+                                    {this.state.strength}%
                                 </div>
                             </div>
                         </div>

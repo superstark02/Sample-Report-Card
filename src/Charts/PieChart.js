@@ -15,7 +15,7 @@ export class PieChart extends Component {
               stroke: {
                 colors: ['#fff']
               },
-              labels: ['Maths', 'Physics', 'Biology', 'Chemistry'],
+              labels: ['Biology', 'Chemistry','Maths', 'Physics'],
               fill: {
                 opacity: 0.8
               },
@@ -40,7 +40,7 @@ export class PieChart extends Component {
     render() {
         return (
             <div >
-                <Chart options={this.state.options} series={this.state.series} type="polarArea"  />
+                <Chart options={this.state.options} series={this.props.series} type="polarArea"  />
             </div>
         )
     }
