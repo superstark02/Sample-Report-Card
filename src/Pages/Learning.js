@@ -3,7 +3,8 @@ import { FaAtom, FaCalculator, FaMagnet, FaVials } from 'react-icons/fa';
 import '../CSS/Pages/Learning.css'
 import '../CSS/Pages/Overall.css'
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-import SubjectLearning from '../Components/SubjectLearning';
+import { Maths } from '../Learning/Maths';
+import { Chemistry } from '../Learning/Chemistry';
 
 
 export class Learning extends Component {
@@ -12,7 +13,7 @@ export class Learning extends Component {
             <div>
                 <BrowserRouter>
                 <div style={{ display: "flex" }} >
-                    <Link to={"/"+this.props.id+"/subject/maths/"+"fc427b"} >
+                    <Link to={"/"+this.props.id+"/maths/"} >
                         <div style={{ width: "fit-content", margin: "10px" }}  >
                             <div className="wrap subject" style={{ backgroundColor: "rgba(252, 66, 123,0.5)", borderColor: "rgba(252, 66, 123,1.0)" }} >
                                 <FaCalculator color="white" size="20px" />
@@ -23,7 +24,7 @@ export class Learning extends Component {
                         </div>
                     </Link>
 
-                    <Link to={"/"+this.props.id+"/subject/chemistry/"+"1b9cfc"} >
+                    <Link to={"/"+this.props.id+"/chemistry/"} >
                     <div style={{ width: "fit-content", margin: "10px" }}  >
                         <div className="wrap subject" style={{ backgroundColor: "rgba(27, 156, 252,0.5)", borderColor: "rgba(27, 156, 252,1.0)" }} >
                             <FaVials color="white" size="20px" />
@@ -55,7 +56,8 @@ export class Learning extends Component {
 
                 
                     <Switch>
-                        <Route path="/:name/subject/:id/:color" component={SubjectLearning} />
+                        <Route path="/:name/maths" component={Maths} />
+                        <Route path="/:name/chemistry" component={Chemistry} />
                     </Switch>
                 </BrowserRouter>
             </div>

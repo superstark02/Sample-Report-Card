@@ -7,7 +7,7 @@ import { getSubDoc } from '../Database/getDoc';
 
 const number = [1, 2, 3, 4, 5, 6, 7]
 
-export class Subject extends Component {
+export class PMaths extends Component {
 
     state = {
         subject: null,
@@ -15,7 +15,7 @@ export class Subject extends Component {
     }
 
     componentDidMount() {
-        getSubDoc("Students", this.props.match.params.name, "Subjects", this.props.match.params.id).then(snap => {
+        getSubDoc("Students", this.props.match.params.name, "Subjects", "maths").then(snap => {
             this.setState({ subject: snap })
         })
     }
@@ -40,13 +40,13 @@ export class Subject extends Component {
                                 }]
                             }
 
-                                mycolor={"#" + this.props.match.params.color}
+                                mycolor={"#fc427b"}
 
                             />
 
                             <div style={{ display: "flex", flexWrap: "wrap", margin: "40px 0px" }} >
                                 <div style={{ display: "flex", margin: "10px 0px" }} >
-                                    <div className="attendance" style={{ backgroundColor: "#" + this.props.match.params.color }}  >
+                                    <div className="attendance" style={{ backgroundColor: "#fc427b" }}  >
                                         <FaBalanceScaleRight size="30px" />
                                     </div>
                                     <div style={{ margin: "0px 10px" }} >
@@ -60,7 +60,7 @@ export class Subject extends Component {
                                 </div>
 
                                 <div style={{ display: "flex", margin: "10px 0px" }} >
-                                    <div className="attendance" style={{ backgroundColor: "#" + this.props.match.params.color }} >
+                                    <div className="attendance" style={{ backgroundColor: "#fc427b" }} >
                                         <FaTrophy size="30px" />
                                     </div>
                                     <div style={{ margin: "0px 10px" }} >
@@ -113,4 +113,4 @@ export class Subject extends Component {
     }
 }
 
-export default Subject
+export default PMaths
