@@ -26,6 +26,7 @@ export class LineChart extends Component {
                         format: 'dd/MM/yy'
                     },
                 },
+                colors:[props.mycolor]
             },
         };
     }
