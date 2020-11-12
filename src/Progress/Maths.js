@@ -89,7 +89,7 @@ export class PMaths extends Component {
                                                 <div className="wrap" >
                                                     <div style={{ padding: "10px" }} >
                                                         <div>
-                                                            <b>Topics</b>
+                                                            <b>Test Name</b>
                                                         </div>
                                                         <div className="sub-heading" >
                                                             dd/mm/yyyy
