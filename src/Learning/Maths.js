@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Guage from '../Charts/Guage';
 import  { getSubDoc } from '../Database/getDoc'
-import { FaFileAlt, FaDumbbell, FaPlay, FaBook } from 'react-icons/fa';
+import { FaFileAlt, FaDumbbell, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 
 const number = [1, 2, 3, 4, 5, 6, 7]
 
@@ -82,8 +82,8 @@ export class Maths extends Component {
                         return (
                             <div className="wrap" >
                                 <div className="timeline-item" >
-                                    <div className="wrap" style={{ width: "100px", height: "90px", backgroundColor: "rbga(0,0,0,0.3)" }} >
-                                        <FaPlay color="grey" />
+                                    <div className="wrap" style={{ width: "90px", height: "90px", backgroundColor: "rbga(0,0,0,0.3)" }} >
+                                        <FaChalkboardTeacher color="grey" size="40px" />
                                     </div>
                                     <div style={{ padding: "10px", display: "flex", flexDirection: "column", justifyContent: "space-between" }} >
                                         <div>

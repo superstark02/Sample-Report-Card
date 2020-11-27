@@ -13,9 +13,9 @@ export class Progress extends Component {
 
                     <div style={{ display: "flex" }} >
                         <Link to={"/"+this.props.id+'/progress/maths/'} >
-                            <div style={{ width: "fit-content", margin: "10px" }}  >
-                                <div className="wrap subject" style={{ backgroundColor: "rgba(252, 66, 123,0.5)", borderColor: "rgba(252, 66, 123,1.0)" }} >
-                                    <FaCalculator color="white" size="20px" />
+                            <div style={{ width: "fit-content" }} className="maths" >
+                                <div className="wrap" >
+                                    <FaCalculator color="white" size="30px" />
                                 </div>
                                 <div className="subject-label" >
                                     Maths
@@ -24,9 +24,9 @@ export class Progress extends Component {
                         </Link>
 
                         <Link to={"/"+this.props.id+'/progress/chemistry/'} >
-                            <div style={{ width: "fit-content", margin: "10px" }}  >
-                                <div className="wrap subject" style={{ backgroundColor: "rgba(27, 156, 252,0.5)", borderColor: "rgba(27, 156, 252,1.0)" }} >
-                                    <FaVials color="white" size="20px" />
+                            <div style={{ width: "fit-content" }} className="chem" >
+                                <div className="wrap" >
+                                    <FaVials color="white" size="30px" />
                                 </div>
                                 <div className="subject-label" >
                                     Chemistry
@@ -34,22 +34,24 @@ export class Progress extends Component {
                             </div>
                         </Link>
 
-                        <div style={{ width: "fit-content", margin: "10px" }}  >
-                            <div className="wrap subject" style={{ backgroundColor: "rgba(235, 47, 6,0.5)", borderColor: "rgba(235, 47, 6,1.0)" }} >
-                                <FaMagnet color="white" size="20px" />
+                        <div style={{ width: "fit-content"}} className="phy" >
+                            <div className="wrap" >
+                                <FaMagnet color="white" size="30px" />
                             </div>
                             <div className="subject-label" >
                                 Physics
+                            </div>
                         </div>
-                        </div>
-                        <div style={{ width: "fit-content", margin: "10px" }}  >
-                            <div className="wrap subject" style={{ backgroundColor: "rgba(85, 230, 193,0.5)", borderColor: "rgba(85, 230, 193,1.0)" }}  >
-                                <FaAtom color="white" size="20px" />
+
+                        <div style={{ width: "fit-content" }} className="bio" >
+                            <div className="wrap "  >
+                                <FaAtom color="white" size="30px" />
                             </div>
                             <div className="subject-label" >
                                 Biology
+                            </div>
                         </div>
-                        </div>
+
                     </div>
                     <hr></hr>
                     <Switch>

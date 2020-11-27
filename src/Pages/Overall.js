@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PieChart from '../Charts/PieChart';
-import { FaBrain, FaClipboard, FaFileAlt, FaProjectDiagram, FaSpa, FaTachometerAlt } from 'react-icons/fa';
+import { FaBrain, FaProjectDiagram, FaSpa, FaTachometerAlt } from 'react-icons/fa';
 import CustomizedSlider from '../Charts/Slider';
 import '../CSS/Pages/Overall.css'
 import getDoc from '../Database/getDoc';
@@ -47,25 +47,20 @@ export class Overall extends Component {
                         )
                     }
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }} >
-                    <div style={{ display: "flex", margin: "10px 0px" }} >
-                        <div className="attendance" >
-                            <FaClipboard size="30px" />
-                        </div>
-                        <div style={{ margin: "0px 10px" }} >
+                <div style={{ display: "flex", justifyContent:"center" }} >
+
+                    <div style={{ display: "flex" }} className="attendance" >
+                        <div style={{ margin: "0px 10px"}} >
                             <div>
                                 <b>Attendance</b>
                             </div>
                             <div>
-                                93/{this.state.defualt.tests}
+                                40/{this.state.defualt.tests}
                             </div>
                         </div>
                     </div>
 
-                    <div style={{ display: "flex", margin: "10px 0px" }} >
-                        <div className="attendance" >
-                            <FaFileAlt size="30px" />
-                        </div>
+                    <div style={{ display: "flex" }} className="test"  >
                         <div style={{ margin: "0px 10px" }} >
                             <div>
                                 <b>Test Atempted</b>

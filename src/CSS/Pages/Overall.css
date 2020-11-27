@@ -1,6 +1,18 @@
 .attendance{
-    padding: 10px 13px;
-    border-radius: 50%;
-    background-color: #4ddbc4;
+    padding: 10px;
     color:white;
+    background-image: linear-gradient(to bottom right, rgb(63,233,225), rgb(193,247,173));
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 10px;
 }
+
+.test{
+    padding: 10px;
+    color:white;
+    background-image: linear-gradient(to bottom right, rgb(254,141,145), rgb(252,186,129));
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+

@@ -3,3 +3,11 @@
   align-items: center;
   justify-content: center;
 }
+
+html, body{
+  font-family: karla;
+}
+
+div{
+  font-family: karla;
+}

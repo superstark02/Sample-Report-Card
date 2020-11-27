@@ -20,10 +20,11 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      style={{backgroundColor:"white", width:"100%"}}
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <Typography style={{width:"100%"}} >{children}</Typography>
         </Box>
       )}
     </div>
@@ -46,7 +47,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    maxWidth:"100%"
+    width:"100%"
   },
 }));
 
@@ -60,8 +61,8 @@ export default function SimpleTabs(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{backgroundColor:"white",color:"rgba(0,0,0,0.8)"}} >
-        <Tabs value={value} onChange={handleChange} variant="fullWidth" aria-label="simple tabs example">
+      <AppBar elevation={0} position="static" style={{backgroundColor:"white",color:"rgba(0,0,0,0.8)", width:"100%"}} >
+        <Tabs value={value} onChange={handleChange} variant="fullWidth">
           <Tab label="Overall" {...a11yProps(0)} />
           <Tab label="Learning" {...a11yProps(1)} />
           <Tab label="Progress" {...a11yProps(2)} />

@@ -1,20 +1,17 @@
 import React, { Component } from 'react'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
+import "../CSS/Pages/Home.css"
 import SimpleTabs from '../Tabs/SimpleTabs';
 import getDoc from '../Database/getDoc';
 
 export class Home extends Component {
 
     state = {
-        name:""
+        name: ""
     }
 
-    componentDidMount(){
-        getDoc("Students",this.props.match.params.student).then(item=>{
-            this.setState({name:item.name})
+    componentDidMount() {
+        getDoc("Students", this.props.match.params.student).then(item => {
+            this.setState({ name: item.name })
             console.log(item)
         })
     }
@@ -22,16 +19,18 @@ export class Home extends Component {
     render() {
         return (
             <div>
-                <AppBar position="static" style={{ backgroundColor: "white", color: "rgba(0,0,0,0.8)" }} >
-                    <Toolbar>
-                        <IconButton edge="start" color="inherit" aria-label="menu">
-                        </IconButton>
-                        <Typography variant="h6">
-                            {this.state.name}
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-                <div className="wrap" >
+                <div className="app-bar" >
+                    <div style={{color:"rgb(128,128,136)"}} >
+                        25 April
+                    </div>
+                    <div style={{fontSize:"30px", margin:"5px 0px"}} >
+                        {this.state.name}
+                    </div>
+                    <div style={{color:"rgb(128,128,136)"}} >
+                        12 - C
+                    </div>
+                </div>
+                <div className="wrap tabs-overlay" >
                     <SimpleTabs id={this.props.match.params.student} />
                 </div>
             </div>
